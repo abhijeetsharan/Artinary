@@ -1,10 +1,16 @@
-import React from 'react'
+import { UserButton, SignedIn, SignedOut, SignInButton } from '@clerk/nextjs'
 
 const Home = () => {
   return (
-    <div>
-      Home
-    </div>
+    <header style={{ display: 'flex', justifyContent: 'space-between', padding: 20 }}>
+      <h1>Home</h1>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
+      <SignedOut>
+        <SignInButton />
+      </SignedOut>
+    </header>
   )
 }
 
